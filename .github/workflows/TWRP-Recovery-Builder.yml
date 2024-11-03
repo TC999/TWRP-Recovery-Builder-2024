@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       MANIFEST_BRANCH:
-        description: 'TWRP Minimal-Manifest Branch'
+        description: 'TWRP 分支'
         required: true
         default: ''
         type: choice
@@ -14,23 +14,23 @@ on:
         - twrp-11
         - twrp-9.0
       DEVICE_TREE:
-        description: 'Custom Recovery Tree' 
+        description: '原设备树' 
         required: true
         default: 'https://github.com/kinguser981/cap_sprout_twrp'
       DEVICE_TREE_BRANCH:
-        description: 'Custom Recovery Tree Branch' 
+        description: '原设备树分支' 
         required: true
         default: 'android-12.1'
       DEVICE_PATH:
-        description: 'Specify your Device Path' 
+        description: '指定设备路径' 
         required: true
         default: 'device/nokia/cap_sprout'
       DEVICE_NAME:
-        description: 'Specify your Device Codename' 
+        description: '设备名' 
         required: true
         default: 'cap_sprout'
       BUILD_TARGET:
-        description: 'Specify your Build Target' 
+        description: '指定编译目标' 
         required: true
         default: 'recovery'
         type: choice
@@ -39,16 +39,16 @@ on:
         - recovery
         - vendorboot
       LDCHECK:
-        description: 'Path of blobs to check' 
+        description: '要检查的 Blob 的路径' 
         required: true
         default: 'system/bin/qseecomd'
       RECOVERY_TAR:
-        description: 'Release recovery.tar For Samsung devices'
+        description: '发布 recovery.tar 适用于三星设备'
         required: false
         default: false
         type: boolean
       RECOVERY_INSTALLER:
-        description: 'Include recovery installer zip'
+        description: '包括恢复安装程序压缩包'
         type: boolean
         required: true
         default: true
